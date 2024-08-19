@@ -1,0 +1,27 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 
+ <title>Document</title>
+</head>
+<body>
+
+
+ <script type="module">
+    //  calculate 1 month after today and display in the same format as 15a
+ 
+     import dayjs from 'https://unpkg.com/dayjs@1.11.10/esm/index.js';
+
+     const today = dayjs();
+     const afterFiveDays = today.add('1','month');
+     const dateString = afterFiveDays.format('MMMM D');
+     console.log(dateString);
+
+
+
+
+
+ </script>
+</body>
+</html>

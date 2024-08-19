@@ -1,0 +1,42 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 
+ <title>Document</title>
+</head>
+<body>
+  <h1>
+   (15e) Create a function isWeekend(date) that takes a DayJs object, and returns whether the date is 'Saturday' or 'Sunday' (hint:use solution from 15d). Test this Function with a few different dates.
+  </h1> 
+
+
+ <script type="module">
+    
+ 
+     import dayjs from 'https://unpkg.com/dayjs@1.11.10/esm/index.js';
+
+      const dateObject = dayjs();
+      const date = dateObject.format('dddd');
+
+
+     function isWeekend(date){
+     if(date ==='Sunday' || date === 'Saturday'){
+      return console.log(`hurray! ${date}`);
+     }
+     else{
+      console.log('no weekend');
+     }
+       
+     }
+
+     isWeekend(date);
+
+
+
+
+
+
+ </script>
+</body>
+</html>

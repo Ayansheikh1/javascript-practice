@@ -1,0 +1,27 @@
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+  
+  <title>Document</title>
+ </head>
+ <body>
+
+
+  <script type="module">
+     //  Using DayJS get the date 5 days after today and display it in the format '<Month'><Day of Month>' 
+  
+      import dayjs from 'https://unpkg.com/dayjs@1.11.10/esm/index.js';
+
+      const today = dayjs();
+      const afterFiveDays = today.add('5','days');
+      const dateString = afterFiveDays.format('MMMM D');
+      console.log(dateString);
+
+
+ 
+
+
+  </script>
+ </body>
+ </html>

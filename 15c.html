@@ -1,0 +1,31 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 
+ <title>Document</title>
+</head>
+<body>
+  <h1>
+   (Que) Dayjs has .subtract(...) method which subtracts time from date . calculate 1 month before today and display in same format as 15a.
+  </h1> 
+
+
+ <script type="module">
+    // Dayjs has .subtract(...) method which subtracts time from date 
+    // calculate 1 month before today and display in same format as 15a.
+ 
+     import dayjs from 'https://unpkg.com/dayjs@1.11.10/esm/index.js';
+
+     const today = dayjs();
+     const afterFiveDays = today.subtract('1','month');
+     const dateString = afterFiveDays.format('MMMM D');
+     console.log(dateString);
+
+
+
+
+
+ </script>
+</body>
+</html>

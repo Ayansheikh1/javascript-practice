@@ -1,0 +1,31 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 
+ <title>Document</title>
+</head>
+<body>
+  <h1>
+   (15g) We can also rename a default export when we import. In 15f, when we "import isWeekend", change the name to something else like "import isSatSun" and use this new name to run the function.
+  </h1> 
+
+
+ <script type="module">
+    
+  import dayjs from 'https://unpkg.com/dayjs@1.11.10/esm/index.js';
+
+  import isSatSun from './15f.js';
+
+     const date = dayjs();
+
+     console.log(isSatSun(date));
+
+
+
+
+
+
+ </script>
+</body>
+</html>
