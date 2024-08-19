@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  <title>Document</title>
+</head>
+<body>
+  <button onclick="
+    messages++;
+    
+    ">Add</button>
+    <button onclick="
+    messages--;
+    ">Remove</button>
+  <script>
+
+    let messages = 2;
+   
+   setInterval(function(){
+    if(document.title === 'Document'){
+      document.title = `(${messages}) New messages`;
+    }else{
+      document.title = 'Document';
+    }
+   },1000);
+    
+    
+   
+   
+
+  </script>
+</body>
+</html>

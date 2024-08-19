@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 
+  <title>Document</title>
+</head>
+<body>
+  <input placeholder="Type something" 
+   onkeyup="
+      textboxText();
+ 
+ " >
+  <p></p>
+
+  <script>
+    function textboxText(){
+    const inputElement = document.querySelector('input').value;
+
+      document.querySelector('p').innerHTML = inputElement;
+    }
+    
+  </script>
+</body>
+</html>

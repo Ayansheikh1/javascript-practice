@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    function arraySwap(array){
+      const lastIndex =array.length-1;
+
+
+      const firstValue = array[0];
+      const lastValue = array[lastIndex]
+
+
+      array[0]=lastValue;
+      array[lastIndex]=firstValue;
+     return array;
+
+
+    }
+    console.log(arraySwap([4,6,8]));
+
+    
+  </script>
+</body>
+</html>

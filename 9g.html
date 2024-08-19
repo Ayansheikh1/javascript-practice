@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Amazon shipping calculator</title>
+</head>
+<body>
+  <input placeholder="enter amount"  onkeydown="
+    
+    if(event.key === 'Enter'){
+      calculateTotal();
+    }
+    "> 
+  <button  
+  onclick="
+  calculateTotal();
+  
+  ">Calculate</button>
+  <p></p>
+  <script>
+    function calculateTotal(){
+      const inputElement = document.querySelector('input')
+      let amount = Number(inputElement.value) * 100;
+      if(amount < 4000 ){
+        amount = amount + 1000; 
+        
+      }
+      document.querySelector('p').innerHTML = `$${amount/100}`;
+      
+    }
+
+  </script>
+</body>
+</html>

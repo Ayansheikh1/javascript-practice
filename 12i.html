@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  <title>Document</title>
+</head>
+<body>
+  <button onclick="
+    messages++;
+    displayNotification();
+    
+    ">Add</button>
+    <button onclick="
+
+    if(messages > 0){messages--;}
+    if(messages ===0){stopNotification();}
+    ">Remove</button>
+  <script>
+
+    let messages = 2;
+
+    let intervalId;
+
+   let isNotificationDisplay;
+
+   displayNotification();
+
+   function displayNotification(){
+
+    if(isNotificationDisplay){
+      return;
+    }
+   }
+
+   isNotificationDisplay = true;
+
+
+
+   intervalId = setInterval(function(){
+
+    if(document.title === 'Document'){
+      document.title = `(${messages}) New messages`;
+    }else{
+      document.title = 'Document';
+    }
+   },1000);
+    
+  
+
+  function stopNotification(){
+    isNotificationDisplay =false;
+
+    clearInterval(intervalId);
+    document.title = 'Document';
+  }
+   
+   
+
+  </script>
+</body>
+</html>

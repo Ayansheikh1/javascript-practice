@@ -1,0 +1,12 @@
+.toggled{
+  background-color: rgb(208, 207, 207);
+  border:none;
+  border-radius: 2px;
+  padding: 8px 15px;
+  cursor :pointer;
+} 
+
+.is-toggled{
+background-color: black;
+color: white;
+}

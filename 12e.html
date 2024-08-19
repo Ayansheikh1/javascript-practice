@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 
+  <title>Document</title>
+</head>
+<body>
+  <button onclick="
+    updateDisplay();
+    ">Add to cart</button>
+
+    <p class="js-display"></p>
+
+    <script>
+      function updateDisplay(){
+        const display = document.querySelector('.js-display');
+        display.innerHTML = 'Added';
+        setTimeout(function(){
+          display.innerHTML = '';
+        },2000);
+      }
+    </script>
+</body>
+</html>

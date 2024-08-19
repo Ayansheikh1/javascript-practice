@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Amazon shipping calculator</title>
+  <style>
+    .error-message{
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <input class="js-cost-input" placeholder="enter amount"  onkeydown="
+    
+    if(event.key === 'Enter'){
+      calculateTotal();
+    }
+    "> 
+  <button  
+  onclick="
+  calculateTotal();
+  
+  ">Calculate</button>
+  <p class="js-total-cost"></p>
+  <p class="js-error-message error-message"></p>
+  <script>
+    function calculateTotal(){
+      const inputElement = document.querySelector('.js-cost-input')
+
+      document.querySelector('.js-error-message').innerHTML = '';
+      document.querySelector('.js-total-cost').innerHTML = '';
+
+
+      let amount = Number(inputElement.value) * 100;
+
+      if(amount<0){
+        document.querySelector('.js-error-message').innerHTML = 'Error: cost cannot be less than $0';
+        return;
+        
+      }
+      if(amount < 4000 ){
+        amount = amount + 1000; 
+        
+      }
+
+      
+     
+      document.querySelector('p').innerHTML = `$${amount/100}`;
+      
+    }
+    
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 
+  <title>Document</title>
+</head>
+<body>
+  <button onclick="
+    updateButton();
+    
+    " class="js-button">Start</button>
+
+    <script>
+      function updateButton(){
+        const button = document.querySelector('.js-button');
+        
+        setTimeout(function(){
+          button.innerHTML = 'Finished';
+        },1000);
+      }
+
+    </script>
+</body>
+</html>
