@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!--get request to amazon.com    -->
+  <!--get request to amazon.com with error handling    -->
   <title>Document</title>
 </head>
 <body>
@@ -9,7 +9,7 @@
     const response = fetch('https://amazon.com').then((response) => {
       console.log(response);
     }).catch((error) =>{
-      console.log('CORS error');
+      console.log('CORS error.Your request was blocked by the backend');
     })
   </script>
 </body>
