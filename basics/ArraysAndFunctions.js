@@ -49,3 +49,37 @@ function average(array){
     return sum/array.length;
 }
 console.log(average([1,2,3]));
+
+
+//Remove duplicates from an array using the Set Object
+
+function removeDuplicate(ar){
+    return [...new Set(ar)]; //new Set(arr) → Creates a Set, which automatically stores only unique values.
+//[...new Set(arr)] → Converts the Set back into an array using the spread operator ....
+
+
+}
+const num = [1,2,2,3,4,4,5,5];
+const uniqueNum = removeDuplicate(num);
+console.log(uniqueNum);
+
+
+
+
+
+
+
+
+//Merge two arrays and sort them in ascending order.
+function mergeAndSort(arr1,arr2){
+    const mergeArray = [...arr1,  ...arr2]; //or arr1.concat(arr2); using concat
+
+    //sort in asecding order
+    mergeArray.sort((a,b) => a - b);
+
+    return mergeArray;
+    }
+
+    const array1 =[3,1,4];
+    const array2 =[2,5,6];
+    console.log(mergeAndSort(array1,array2));
