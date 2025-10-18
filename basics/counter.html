@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .container{
+            width: 500px;
+
+            padding: 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: lightblue;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+         <button id="increment">+</button>
+    <span id="count">0</span>
+    <button id="decrement">-</button>
+    </div>
+   
+
+
+    <script>
+        let count = 0;
+        const display = document.getElementById("count");
+
+
+        document.getElementById("increment").onclick = () =>{
+            count++;
+            display.textContent = count;
+        }
+
+        document.getElementById("decrement").onclick = () =>{
+            count--;
+            display.textContent = count;
+        }
+    </script>
+</body>
+</html>
