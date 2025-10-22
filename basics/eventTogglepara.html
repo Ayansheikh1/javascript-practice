@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        p {
+            font-size: 18px;
+            color: #222;
+            margin-bottom: 20px;
+            transition: opacity 0.3s ease;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #333;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <p id="para">
+        my name is ayan an i am web developer and i dont have particularly any dream cause i beleive to make it happen.
+    </p>
+    <button id="toggleBtn">Hide paragraph</button>
+
+
+
+    <script>
+        const para = document.getElementById("para");
+        const toggleBtn= document.getElementById("toggleBtn");
+
+       toggleBtn.addEventListener("click", () => {
+        if(para.style.display === "none"){
+            para.style.display = "block";
+
+            toggleBtn.textContent = "Hide paragraph";
+        }else{
+             para.style.display ="none";
+
+            toggleBtn.textContent = "show paragraph";
+        }
+       });
+    </script>
+</body>
+
+</html>
