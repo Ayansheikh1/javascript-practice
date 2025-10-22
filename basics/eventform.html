@@ -1,0 +1,39 @@
+
+<!-- Build a form and show an alert when submitted. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="myForm">
+        <label for="name">Name</label>
+        <input type="text" id="name" placeholder="enter your name">
+        <br>
+        <label for="age">Date of birth</label>
+        <input type="date" id="age">
+        <br>
+        <label for="contactNumber">Contact</label>
+        <input type="number" placeholder="enter 10 digit phone number" id="contactNumber">
+        <br>
+        <button type="submit">Submit</button>
+    </form>
+
+    <script>
+        const form = document.getElementById("myForm");
+
+        form.addEventListener("submit" , function(event){
+            event.preventDefault();
+            const name = document.getElementById("name").value;
+            const age = document.getElementById("age").value;
+            const phone = document.getElementById("contactNumber").value;
+        
+            alert(`your form is submitted\nName: ${name}\nphone: ${phone}` );
+            form.reset();
+        });
+
+    </script>
+</body>
+</html>
