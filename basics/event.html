@@ -1,0 +1,57 @@
+
+<!-- Create a button that changes background color randomly on click. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Random Background Color</title>
+  <style>
+    body {
+      text-align: center;
+      font-family: Arial, sans-serif;
+      margin-top: 100px;
+      transition: background-color 0.5s ease;
+    }
+    button {
+      padding: 12px 24px;
+      font-size: 18px;
+      border: none;
+      border-radius: 8px;
+      background-color: #333;
+      color: white;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #555;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>🎨 Click to Change Background Color</h2>
+  <button id="colorBtn">Change Color</button>
+
+  <script>
+    const button = document.getElementById("colorBtn");
+
+    // Function to generate a random color
+    function getRandomColor() {
+      const letters = "0123456789ABCDEF";
+      let color = "#";
+      for (let i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random() * 16)];
+      }
+      return color;
+    }
+
+    // Event listener to change background color on click
+    button.addEventListener("click", () => {
+      const randomColor = getRandomColor();
+      document.body.style.backgroundColor = randomColor;
+    });
+  </script>
+
+</body>
+</html>
