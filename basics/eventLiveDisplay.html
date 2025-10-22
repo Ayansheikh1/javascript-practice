@@ -1,0 +1,46 @@
+<!-- 
+Make a live typing display (whatever you type shows instantly below the input). -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            text-align: center;
+            margin-top: 100px;
+        }
+
+        input {
+      padding: 10px;
+      width: 250px;
+      border: 2px solid #333;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+
+    p {
+      margin-top: 20px;
+      font-size: 20px;
+      color: #222;
+      font-weight: bold;
+    }
+    </style>
+</head>
+<body>
+    <h2>Live Typing Display</h2>
+    <input type="text" id="textInput" placeholder="type something...">
+    <p id="displayText"></p>
+
+
+    <script>
+        const input = document.getElementById("textInput");
+        const display = document.getElementById("displayText");
+
+        input.addEventListener("input" ,()=>{
+            display.textContent = input.value;
+        });
+    </script>
+</body>
+</html>
