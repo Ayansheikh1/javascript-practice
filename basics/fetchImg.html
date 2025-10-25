@@ -1,0 +1,31 @@
+<!-- Fetch and display a random dog image from https://dog.ceo/api/breeds/image/random. -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="dogBtn">click me</button>
+    <img alt="random dog will appear here" id="dogImg">
+
+
+    <script>
+        const dogBtn = document.getElementById("dogBtn");
+        const dogImg = document.getElementById("dogImg");
+
+        dogBtn.addEventListener('click', async() => {
+            try{
+                const response = await fetch("https://dog.ceo/api/breeds/image/random");
+                const data = await response.json();
+                dogImg.src = data.message;
+            }catch(error){
+                console.error("dog api error",error);
+            }
+        });
+    </script>
+</body>
+</html>
