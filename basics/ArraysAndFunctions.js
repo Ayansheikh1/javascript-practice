@@ -83,3 +83,98 @@ function mergeAndSort(arr1,arr2){
     const array1 =[3,1,4];
     const array2 =[2,5,6];
     console.log(mergeAndSort(array1,array2));
+
+
+
+//Create an array of numbers and print each using forEach().
+
+
+const numbers = [1,2,3,4,5,6,7,8,9,0];
+numbers.forEach(num => console.log(num));
+
+// Multiply each element by 2 using map().
+const mappedArray = numbers.map((x) => x * 2);
+console.log(mappedArray);
+
+
+//Filter out numbers greater than 50 using filter()
+const array3 = [40,30,3,0,1,50,62,73,82];
+const result = array3.filter((arr) => arr > 50);
+console.log(result);
+
+
+// Find the sum of all numbers using reduce().
+
+const sumOfAllNum = numbers.reduce((acc,curr) => { console.log(acc,curr); return acc + curr}); //accumulator save the sum 
+console.log(sumOfAllNum);
+
+
+
+// Find the first even number using find().
+
+const firstEven = array3.find((num) => num % 2 != 0 );
+console.log(firstEven);
+
+
+
+
+
+
+ //Given an array of users, extract all usernames using map().
+
+const users = [
+    {username: "ayan" , age: 22},
+    {username: "Anam" , age:25},
+    {username: "ashar", age: 18}
+];
+
+const usernames = users.map((user) => user.username );
+console.log(usernames);
+
+
+
+
+
+
+ //From the same array, filter users aged below 25.
+
+
+ const below25 = users.filter((user) => user.age < 25);
+ console.log(below25);
+
+
+
+
+
+
+
+ //Check if all users are above 18 using every().
+
+
+ const allAbove18 = users.every(user => user.age > 18);
+ console.log(allAbove18);
+
+
+
+
+
+
+
+ //Sort an array of scores in descending order.
+
+
+const scores = [25, 30 ,15, 10, 40 ,8];
+const sortedScore = scores.sort((a,b) => b - a);
+console.group(sortedScore);
+
+
+
+
+ //Reverse an array without using the reverse method (manual way).
+
+ const manualReverse =[];
+ const array4 = [1,2,3,4,5,6,7,8,9];
+ for(let i = array4.length -1 ; i >= 0; i--){
+    manualReverse.push(array4[i]); //push method use to insert value in an array
+ }
+console.log(manualReverse);
