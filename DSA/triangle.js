@@ -33,3 +33,25 @@ for (let i = 1; i <= n; i++) {
     // Move to next line
     console.log();
 }
+
+// Alphabet Character Triangle Pattern
+
+// Outer loop → controls rows
+for (let i = 1; i <= n; i++) {
+
+    // ASCII value of 'A'
+    let ascii = 65;
+
+    // Inner loop → prints alphabets in each row
+    for (let j = 1; j <= i; j++) {
+
+        // Convert ASCII value into character and print it
+        process.stdout.write(String.fromCharCode(ascii) + " ");
+
+        // Move to next alphabet
+        ascii++;
+    }
+
+    // Move cursor to next line after one row
+    console.log();
+}
