@@ -34,5 +34,4 @@ for (let i = 2; i < arr.length; i++) {
 // Print second minimum
 console.log(sMin);
 
-// Print minimum
-console.log(min);
+
