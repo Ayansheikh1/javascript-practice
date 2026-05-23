@@ -51,3 +51,6 @@ for (let i = 0; i < arr1.length; i++) {
 
 // Print rotated array
 console.log("Using Formula Method:", temp);
+
+
+
