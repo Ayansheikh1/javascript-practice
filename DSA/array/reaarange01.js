@@ -27,5 +27,7 @@ while (i < arr.length) {
     i++;
 }
 
+
+
 // Print sorted array
 console.log(arr);
