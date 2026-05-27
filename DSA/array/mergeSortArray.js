@@ -51,5 +51,7 @@ while (j < arr2.length) {
     merge[k++] = arr2[j++];
 }
 
+
+
 // Print merged sorted array
 console.log(merge);
