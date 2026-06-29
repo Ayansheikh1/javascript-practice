@@ -24,3 +24,5 @@ for (let i = 1; i <= n; i++) {
     // Move cursor to next line after one row
     console.log();
 }
+
+
