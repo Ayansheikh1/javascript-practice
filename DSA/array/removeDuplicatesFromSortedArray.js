@@ -9,3 +9,5 @@ for (let i = 0; i < arr.length-1; i++) {
     }
     
 }
+arr = arr.slice(0,j);
+console.log(arr);
