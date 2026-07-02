@@ -8,7 +8,7 @@ for (i = 1; i < n; i++) {
 
     // shift all elements GREATER than key → one position to the right
     // to make space for key insertion
-    while (arr[j] > key && j >= 0) {  // ⚠️ still wrong: arr[j] not arr[i]
+    while (arr[j] > key && j >= 0) { 
         arr[j + 1] = arr[j];  // shift element right
         j--;                  // move one step left in sorted part
     }
