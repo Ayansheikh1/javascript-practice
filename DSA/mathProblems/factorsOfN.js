@@ -9,7 +9,8 @@ function factors(n) {
     }
 }
 
- factors(36); //unsorted
+ console.log("unsorted -->");
+  factors(36); //unsorted
 
 
 
@@ -29,6 +30,6 @@ function factors2(n) {
         
     }
 }
-
+console.log("sorted -->");
 factors2(36); //sorted
 
