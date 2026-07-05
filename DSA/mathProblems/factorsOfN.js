@@ -9,7 +9,7 @@ function factors(n) {
     }
 }
 
-// factors(36); //unsorted
+ factors(36); //unsorted
 
 
 
