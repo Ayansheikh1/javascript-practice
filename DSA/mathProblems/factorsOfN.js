@@ -21,9 +21,7 @@ function factors2(n) {
 
     }
 
-    for(let i=Math.floor(Math.sqrt(n)); i>=1; i--) { 
-        
-        // loop till √n
+    for(let i=Math.floor(Math.sqrt(n)); i>=1; i--) { // loop till √n
         if(n % i === 0) {
             if(n/i != i)
             console.log(n/i);           
@@ -32,5 +30,5 @@ function factors2(n) {
     }
 }
 
-factors2(36);
+factors2(36); //sorted
 
