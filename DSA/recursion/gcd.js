@@ -1,3 +1,20 @@
+//gcd - bruteforce method
+function gcd1(a,b){
+    for(let i = Math.min(a,b);i>=1;i--){
+        if(a%i==0 && b%i==0){
+            return i;
+        }
+    }
+
+} 
+console.log("GCD USING BRUTE FORCE METHOD = "+gcd1(48,18));
+
+
+
+
+
+
+
 
 //Iterative method - Euclidean algorithm
 let a= 32, b= 20;
@@ -18,4 +35,4 @@ function gcd(a,b){
     return gcd(b,a%b);
 }
 
-console.log(gcd(20,32))
+console.log("GCD USING Euclidean algorithm = "+gcd(20,32))
