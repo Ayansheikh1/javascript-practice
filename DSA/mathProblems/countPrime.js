@@ -1,22 +1,20 @@
 
 //Sieve of Eratosthene
-function seive(n){
-    let isPrime = new Array(n+1).fill(true); // initially mark all as prime 
-    isPrime[0] = false;
-    isPrime[1] = false;
+function sieve(n){
+    let arr = new Array(n+1).fill(true);//mark evry number at first as prime
 
-    for(let i = 2;i< Math.floor(Math.sqrt(n));i++){
-        if(isPrime[i]){ //if prime then mark false to multiple factor
-            for(let j = i*i; j<=n; j+=i){ 
-                isPrime[j] = false; 
+    for(let i =2;i*i<n;i++){
+        if(arr[i]){
+            for(let j = i*i;j<=n;j+=i){
+                //mark multiple factor of that number to False
+                arr[j] = false; 
             }
         }
     }
 
-    for(let i= 0;i<n;i++){
-        if(isPrime[i]) process.stdout.write(i +" ");  //traverse array
-    }
+    for(let i = 2;i<=n;i++){
+        if(arr[i]) process.stdout.write(i+" ")
+    } // traverse the array and print those who still mark as true-->which are a prime numbers.
 }
 
-
-seive(20)
+sieve(100)
