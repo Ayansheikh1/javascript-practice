@@ -6,11 +6,11 @@ if(index==-1) console.log("not found")
 
 function binarySearch(arr,first,last,target){
    while(first<=last){
-    let mid = Math.floor((first+last)/2);
+    let mid = Math.floor((first+last)/2); //mid = first + (last-first)/2
     if(arr[mid]===target) return mid
     else if(arr[mid]>target) last = mid-1
     else first = mid+1
    }
-   
+
    return -1
 }
