@@ -33,3 +33,5 @@ function swap(arr,i,j){
 let arr =[3,2,1,6,4]
 quickSort(arr,0,arr.length-1);
 console.log(arr)
+
+
