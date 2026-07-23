@@ -12,4 +12,4 @@ while(i<arr.length){
     }
 }
 
-console.log(arr)
+console.log(arr) //print output
