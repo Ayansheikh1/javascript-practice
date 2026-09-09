@@ -1,4 +1,4 @@
-let arr = [3,8,10,13,5,18];
+let arr = [3,8,10,13,5,9,18];
 const n = arr.length;
 
 for(let i = 0;i<n-1;i++){
