@@ -16,11 +16,30 @@ find the arrangement where the student who receives the most pages still has the
 let arr = [12, 34, 67, 90];
 const k = 2;
 
+function isValid(arr,k,mid){
+    let numberOfStudents = 1;
+    let sum = 0;
+
+    for(let i = 0;i<arr.length;i++){
+        if(sum + arr[i] > mid){
+            numberOfStudents++
+            sum = arr[i]
+            if(numberOfStudents>k){return false} 
+        }else sum+=arr[i]
+    }
+
+    return true
+}
+
 
 
 function findPages(arr,k){
+
+if(k>arr.length) return -1
 let first = 0;
 let last = 0;
+let ans = -1;
+
 for(let i = 0;i<arr.length;i++){
    first = Math.max(first,arr[i]);
    last += arr[i]; 
@@ -30,8 +49,17 @@ for(let i = 0;i<arr.length;i++){
 
 while(first<=last){
     let mid = Math.floor((first+last)/2);
+    if(isValid(arr,k,mid)){
+        ans = mid;//we get possible answer so what we decreses nummber of pages from the last
+        last = mid-1 
+    }else{
+        first = mid+1
+    }
+    
 }
+
+return ans
 
 }
 
-findPages(arr,k)
+console.log(findPages(arr,k)) 
