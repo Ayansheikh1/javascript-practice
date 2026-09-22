@@ -50,7 +50,7 @@ for(let i = 0;i<arr.length;i++){
 while(first<=last){
     let mid = Math.floor((first+last)/2);
     if(isValid(arr,k,mid)){
-        ans = mid;//we get possible answer so what we decreses nummber of pages from the last
+        ans = mid;//we get possible answer so what we decreases nummber of pages from the last
         last = mid-1 
     }else{
         first = mid+1
