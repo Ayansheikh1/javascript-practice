@@ -16,6 +16,8 @@ find the arrangement where the student who receives the most pages still has the
 let arr = [12, 34, 67, 90];
 const k = 2;
 
+
+
 function findPages(arr,k){
 let first = 0;
 let last = 0;
@@ -26,4 +28,10 @@ for(let i = 0;i<arr.length;i++){
 //define first as finding out max pages book which actually represent the minimum pages gets to each student  
 
 
+while(first<=last){
+    let mid = Math.floor((first+last)/2);
 }
+
+}
+
+findPages(arr,k)
