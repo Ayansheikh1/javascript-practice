@@ -1,4 +1,4 @@
-let arr = [7,4,5,1,2,6,3];
+let arr = [7,4,5,1,2,6,3,8];
 
 let i = 0;
 while(i<arr.length){
