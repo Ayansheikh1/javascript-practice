@@ -42,6 +42,6 @@ function divide(arr, first, last) {
 
 }
 
-let arr = [8, 2, 1, 5, 7, 9, 3];
+let arr = [8, 2, 1, 5, 7, 9, 3,10];
 divide(arr, 0, arr.length - 1)
 console.log(arr)
