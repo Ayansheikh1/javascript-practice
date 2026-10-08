@@ -11,7 +11,7 @@ for(let i = 0;i<numbers.length;i++){
         map.set(numbers[i],1)
     }
 
-    //map.set(numbers[i],map.get(numbers[i] || 0) + 1)
+    //map.set(numbers[i],map.get(numbers[i]) || 0 + 1)
 }
 
 console.log(map);
